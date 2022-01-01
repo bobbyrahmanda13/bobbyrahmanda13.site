@@ -1,0 +1,6 @@
+{
+  "trailingComma": "all",
+  "endOfLine": "auto",
+  "singleQuote": true,
+  "printWidth": 100
+}

@@ -1,0 +1,8 @@
+module.exports = {
+  root: true,
+  extends: ['plugin:vue/vue3-essential', 'prettier'],
+  rules: {
+    'vue/no-unused-vars': 'error',
+    'vue/multi-word-component-names': 'off',
+  },
+};
