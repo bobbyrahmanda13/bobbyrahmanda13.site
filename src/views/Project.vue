@@ -73,30 +73,16 @@ import { useMeta } from 'vue-meta';
 
 useMeta({
   title: 'Project',
-  description: 'Web Personal Bobby Rahmanda',
-  meta: [
-    {
-      property: 'og:type',
-      content: 'article',
-    },
-    {
-      property: 'og:title',
-      content: 'the result of the project created',
-    },
-    {
-      property: 'site_name',
-      content: 'bobby rahmanda',
-    },
-    {
-      property: 'og:url',
-      content: 'https://bobbyrahmanda.vercel.app/project',
-    },
-    {
-      property: 'og:description',
-      content:
-        'Personal web from bobby rahmanda contains about the portfolio, hardware, software used, and about me ',
-    },
-  ],
+  description: 'the result of a project I created',
+  og: {
+    locale: 'en_US',
+    type: 'website',
+    title: 'Web Personal Bobby Rahmanda',
+    description:
+      'Personal web from bobby rahmanda contains about the portfolio, hardware, software used, and about me',
+    url: 'https://bobbyrahmanda.vercel.app/project',
+    site_name: 'bobby rahmanda',
+  },
 });
 
 const tabProject = ref('sourceCode');

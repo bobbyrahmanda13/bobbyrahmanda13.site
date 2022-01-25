@@ -8,30 +8,15 @@ import { useMeta } from 'vue-meta';
 useMeta({
   title: 'Bobby Rahmanda',
   description: 'Web Personal Bobby Rahmanda',
-  meta: [
-    {
-      property: 'og:type',
-      content: 'article',
-    },
-    {
-      property: 'og:title',
-      content:
-        'I like to make time for productivity and study it to improve my skills and workflow',
-    },
-    {
-      property: 'site_name',
-      content: 'bobby rahmanda',
-    },
-    {
-      property: 'og:url',
-      content: 'https://bobbyrahmanda.vercel.app/',
-    },
-    {
-      property: 'og:description',
-      content:
-        'Personal web from bobby rahmanda contains about the portfolio, hardware, software used, and about me ',
-    },
-  ],
+  og: {
+    locale: 'en_US',
+    type: 'website',
+    title: 'Web Personal Bobby Rahmandaa',
+    description:
+      'Personal web from bobby rahmanda contains about the portfolio, hardware, software used, and about me',
+    url: 'https://bobbyrahmanda.vercel.app/',
+    site_name: 'bobby rahmanda',
+  },
 });
 </script>
 

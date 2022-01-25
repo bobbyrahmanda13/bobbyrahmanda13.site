@@ -68,31 +68,15 @@ import { useMeta } from 'vue-meta';
 
 useMeta({
   title: 'About',
-  description:
-    'I am from Indonesia and I am a graduate of the Department of Informatics Engineering at Putra Indonesia University YPTK Padang',
-  meta: [
-    {
-      property: 'og:type',
-      content: 'article',
-    },
-    {
-      property: 'og:title',
-      content:
-        'I am from Indonesia and I am a graduate of the Department of Informatics Engineering at Putra Indonesia University YPTK Padang',
-    },
-    {
-      property: 'site_name',
-      content: 'bobby rahmanda',
-    },
-    {
-      property: 'og:url',
-      content: 'https://bobbyrahmanda.vercel.app/about',
-    },
-    {
-      property: 'og:description',
-      content:
-        'Personal web from bobby rahmanda contains about the portfolio, hardware, software used, and about me ',
-    },
-  ],
+  description: 'story about me ',
+  og: {
+    locale: 'en_US',
+    type: 'website',
+    title: 'story about myself, education, experiences and current activities',
+    description:
+      'Personal web from bobby rahmanda contains about the portfolio, hardware, software used, and about me',
+    url: 'https://bobbyrahmanda.vercel.app/about',
+    site_name: 'bobby rahmanda',
+  },
 });
 </script>
