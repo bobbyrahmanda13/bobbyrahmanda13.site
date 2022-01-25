@@ -8,14 +8,27 @@ import { useMeta } from 'vue-meta';
 useMeta({
   title: 'Bobby Rahmanda',
   description: 'Web Personal Bobby Rahmanda',
+
+  meta: [
+    {
+      httpEquiv: 'X-UA-Compatible',
+      content: 'IE=edge,chrome=1',
+    },
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://bobbyrahmanda13.site/',
+    },
+  ],
   og: {
     locale: 'en_US',
     type: 'website',
     title: 'Web Personal Bobby Rahmandaa',
+    site_name: 'bobby rahmanda',
+    url: 'https://bobbyrahmanda.vercel.app/',
     description:
       'Personal web from bobby rahmanda contains about the portfolio, hardware, software used, and about me',
-    url: 'https://bobbyrahmanda.vercel.app/',
-    site_name: 'bobby rahmanda',
   },
 });
 </script>
