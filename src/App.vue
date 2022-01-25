@@ -3,9 +3,40 @@
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import Navbar from '@/components/Navbar.vue';
 import Footer from '@/components/Footer.vue';
+import { useMeta } from 'vue-meta';
+
+useMeta({
+  title: 'Bobby Rahmanda',
+  description: 'Web Personal Bobby Rahmanda',
+  meta: [
+    {
+      property: 'og:type',
+      content: 'article',
+    },
+    {
+      property: 'og:title',
+      content:
+        'I like to make time for productivity and study it to improve my skills and workflow',
+    },
+    {
+      property: 'site_name',
+      content: 'bobby rahmanda',
+    },
+    {
+      property: 'og:url',
+      content: 'https://bobbyrahmanda.vercel.app/',
+    },
+    {
+      property: 'og:description',
+      content:
+        'Personal web from bobby rahmanda contains about the portfolio, hardware, software used, and about me ',
+    },
+  ],
+});
 </script>
 
 <template>
+  <metainfo />
   <div class="border-y-2 min-h-screen border-white">
     <Navbar />
 

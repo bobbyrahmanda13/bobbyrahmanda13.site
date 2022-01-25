@@ -69,6 +69,35 @@
 import { ref } from 'vue';
 import SourceCode from '@/components/SourceCode.vue';
 import Design from '@/components/Design.vue';
+import { useMeta } from 'vue-meta';
+
+useMeta({
+  title: 'Project',
+  description: 'Web Personal Bobby Rahmanda',
+  meta: [
+    {
+      property: 'og:type',
+      content: 'article',
+    },
+    {
+      property: 'og:title',
+      content: 'the result of the project created',
+    },
+    {
+      property: 'site_name',
+      content: 'bobby rahmanda',
+    },
+    {
+      property: 'og:url',
+      content: 'https://bobbyrahmanda.vercel.app/project',
+    },
+    {
+      property: 'og:description',
+      content:
+        'Personal web from bobby rahmanda contains about the portfolio, hardware, software used, and about me ',
+    },
+  ],
+});
 
 const tabProject = ref('sourceCode');
 </script>
