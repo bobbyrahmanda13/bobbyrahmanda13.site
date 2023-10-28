@@ -123,7 +123,7 @@ const prevPage = () => {
   }
 };
 const nextPage = () => {
-   if(page.value < lastPage) {
+   if(page.value < lastPage.value) {
   page.value++;
  fetchData();
   }
