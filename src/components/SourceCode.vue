@@ -112,7 +112,9 @@ const formatDate = (dateValue) => {
 // pagination
 const page = ref(1);
 const perPage = ref(6);
-let totalPages = repoGithub.value.length
+
+const totalPages = computed(() => Math.ceil(repoGithub.value.length / perPage.value));
+const lastPage = ref(totalPages.value);
 
 const prevPage = () => {
   if(page.value > 1) {
@@ -126,11 +128,6 @@ const nextPage = () => {
  fetchData();
   }
 };
-const lastPage = computed(() => {
-  let totPage = totalPages;
-  let result = totPage / perPage.value;
-  return Math.ceil(result);
-});
 
 const showRepos = computed(() => {
   let start = (page.value - 1) * perPage.value;
