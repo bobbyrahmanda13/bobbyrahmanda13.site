@@ -22,9 +22,9 @@
           >
         </div>
         <div class="flex items-center justify-center my-6 pt-3">
-          <a href="https://github.com/bobbyrahmanda13" target="_blank" class="">
+          <a href="https://github.com/bobbyrahmanda13" target="_blank" class="hover:border hover:border-primary">
             <svg
-              class="m-3 w-6 hover:border hover:border-sky-500"
+              class="m-3 w-6"
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
               y="0px"
@@ -38,9 +38,9 @@
               ></path></svg
           ></a>
 
-          <a href="https://twitter.com/r4hm4n1309" target="_blank">
+          <a href="https://twitter.com/r4hm4n1309" target="_blank" class="hover:border hover:border-primary">
             <svg
-              class="m-3 w-6 hover:border hover:border-sky-500"
+              class="m-3 w-6"
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
               y="0px"
@@ -54,9 +54,9 @@
               ></path>
             </svg>
           </a>
-          <a href="https://t.me/Rahman_0000" target="_blank">
+          <a href="https://t.me/Rahman_0000" target="_blank" class="hover:border hover:border-primary">
             <svg
-              class="m-3 w-6 hover:border hover:border-sky-500"
+              class="m-3 w-6"
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
               y="0px"
@@ -70,9 +70,9 @@
               ></path>
             </svg>
           </a>
-          <a href="https://www.instagram.com/0.0_rahman_0.0/" target="_blank">
+          <a href="https://www.instagram.com/0.0_rahman_0.0/" target="_blank" class="hover:border hover:border-primary">
             <svg
-              class="m-3 w-6 hover:border hover:border-sky-500"
+              class="m-3 w-6"
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
               y="0px"
