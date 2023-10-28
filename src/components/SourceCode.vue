@@ -67,9 +67,6 @@ import axios from 'axios';
 const repoGithub = ref([]);
 const githubAPI = ref('https://api.github.com/users/bobbyrahmanda13/repos?page=');
 const githubPage = ref(1);
-onMounted(() => {
-  fetchData();
-});
 
 // get data from github api
 const fetchData = () => {
@@ -112,9 +109,11 @@ const perPage = ref(6);
 
 const prevPage = () => {
   page.value--;
+ fetchData();
 };
 const nextPage = () => {
   page.value++;
+ fetchData();
 };
 const lastPage = computed(() => {
   let totPage = repoGithub.value.length;
@@ -134,4 +133,8 @@ const showRepos = computed(() => {
 const shortName = (str, n) => {
   return str.length > n ? str.substr(0, n - 1) + '...' : str;
 };
+
+onMounted(() => {
+  fetchData();
+});
 </script>
