@@ -111,7 +111,7 @@ const formatDate = (dateValue) => {
 
 // pagination
 const page = ref(1);
-const perPage = ref(6);
+const perPage = ref(2);
 
 const totalPages = computed(() => Math.ceil(repoGithub.value.length / perPage.value));
 const lastPage = computed(() => totalPages.value);
