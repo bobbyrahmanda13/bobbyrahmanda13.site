@@ -70,6 +70,10 @@ const repoGithub = ref([]);
 const githubAPI = ref('https://api.github.com/users/bobbyrahmanda13/repos?page=');
 const githubPage = ref(1);
 
+onMounted(() => {
+  fetchData();
+});
+
 // get data from github api
 const fetchData = () => {
   try {
@@ -136,7 +140,5 @@ const shortName = (str, n) => {
   return str.length > n ? str.substr(0, n - 1) + '...' : str;
 };
 
-//onMounted(() => {
-//  fetchData();
-//});
+
 </script>
