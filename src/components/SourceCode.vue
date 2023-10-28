@@ -112,7 +112,7 @@ const formatDate = (dateValue) => {
 // pagination
 const page = ref(1);
 const perPage = ref(6);
-const totalPages = repoGithub.value.length
+let totalPages = repoGithub.value.length
 
 const prevPage = () => {
   if(page.value > 1) {
