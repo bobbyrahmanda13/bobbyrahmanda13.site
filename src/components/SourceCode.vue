@@ -36,23 +36,21 @@
     <div class="max-w-xl mx-auto flex justify-center">
       <!-- Pagination -->
       <ul class="mx-auto flex items-center">
-        <li class="relative">
+        <li class="relative" :disabled="page === 1">
          <!-- <li class="relative" :class="page === 1 ? 'md:invisible hidden ' : ''"> -->
           <button
             class="bg-primary mx-2 px-3 py-2 text-primary-white font-bold rounded-lg"
-            @click.prevent="prevPage"
-            :disabled="page === 1"
+            @click="prevPage"
           >
             Previous
           </button>
         </li>
         <li class="font-bold m-5 relative">{{ page }} of {{ lastPage }}</li>
-        <li class="relative">
+        <li class="relative" :disabled="page === lastPage">
            <!-- <li class="relative" :class="page === lastPage ? 'md:invisible hidden' : ''"> -->
           <button 
             class="bg-primary mx-2 px-3 py-2 text-primary-white font-bold rounded-lg" 
-            @click.prevent="nextPage"
-            :disabled="page === lastPage"
+            @click="nextPage"
           >
             Next
           </button>
@@ -114,17 +112,22 @@ const formatDate = (dateValue) => {
 // pagination
 const page = ref(1);
 const perPage = ref(6);
+const totalPages = repoGithub.value.length
 
 const prevPage = () => {
+  if(page.value > 1) {
   page.value--;
  fetchData();
+  }
 };
 const nextPage = () => {
+   if(page.value < totalPages) {
   page.value++;
  fetchData();
+  }
 };
 const lastPage = computed(() => {
-  let totPage = repoGithub.value.length;
+  let totPage = totalPages;
   let result = totPage / perPage.value;
   return Math.ceil(result);
 });
