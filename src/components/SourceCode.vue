@@ -77,7 +77,7 @@ onMounted(() => {
 // get data from github api
 const fetchData = () => {
   try {
-    axios.get(`https://api.github.com/users/bobbyrahmanda13/repos?page=${page.value}&per_page=${perPage.value}`).then((response) => {
+    axios.get(`https://api.github.com/users/bobbyrahmanda13/repos?page=${page.value}`).then((response) => {
       repoGithub.value = response.data;
       //   console.log(repoGithub.value.length);
     });
@@ -111,21 +111,22 @@ const formatDate = (dateValue) => {
 
 // pagination
 const page = ref(1);
-const perPage = ref(2);
+const perPage = ref(6);
 
 const totalPages = computed(() => Math.ceil(repoGithub.value.length / perPage.value));
 const lastPage = computed(() => totalPages.value);
 
 const prevPage = () => {
+  if(page.value > 1) {
   page.value--;
  fetchData();
-
+  }
 };
 const nextPage = () => {
-
+   if(page.value < lastPage.value) {
   page.value++;
  fetchData();
-
+  }
 };
 
 const showRepos = computed(() => {
