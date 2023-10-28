@@ -23,7 +23,7 @@
                 <span>{{ repo.language }}</span>
               </div>
               <div class="flex py-1">
-                <span><span class="font-bold"></span> {{ formatDate(repo.updated_at) }}</span>
+                <span><span class="font-bold"></span> {{ formatDate(repo.pushed_at) }}</span>
               </div>
 
               <!-- <h2 class="text-white font-semibold">{{ repo.name }}</h2>
@@ -86,8 +86,8 @@ const fetchData = () => {
 // sort ascending or descending
 const sortRepoGithub = computed(() => {
   return repoGithub.value.slice().sort((a, b) => {
-    const date1 = new Date(a.updated_at);
-    const date2 = new Date(b.updated_at);
+    const date1 = new Date(a.pushed_at);
+    const date2 = new Date(b.pushed_at);
     const result = date2 - date1;
     return result;
   });
