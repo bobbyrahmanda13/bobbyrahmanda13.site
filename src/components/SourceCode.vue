@@ -36,21 +36,23 @@
     <div class="max-w-xl mx-auto flex justify-center">
       <!-- Pagination -->
       <ul class="mx-auto flex items-center">
-        <li class="relative" :disabled="page === 1">
+        <li class="relative">
          <!-- <li class="relative" :class="page === 1 ? 'md:invisible hidden ' : ''"> -->
           <button
             class="bg-primary mx-2 px-3 py-2 text-primary-white font-bold rounded-lg"
             @click="prevPage"
+            :disabled="page === 1"
           >
             Previous
           </button>
         </li>
         <li class="font-bold m-5 relative">{{ page }} of {{ totalPages }}</li>
-        <li class="relative" :disabled="page === totalPages">
+        <li class="relative">
            <!-- <li class="relative" :class="page === lastPage ? 'md:invisible hidden' : ''"> -->
           <button 
             class="bg-primary mx-2 px-3 py-2 text-primary-white font-bold rounded-lg" 
             @click="nextPage"
+            :disabled="page === totalPages"
           >
             Next
           </button>
