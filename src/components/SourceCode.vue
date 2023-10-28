@@ -45,8 +45,8 @@
             Previous
           </button>
         </li>
-        <li class="font-bold m-5 relative">{{ page }} of {{ lastPage }}</li>
-        <li class="relative" :disabled="page === lastPage">
+        <li class="font-bold m-5 relative">{{ page }} of {{ totalPages }}</li>
+        <li class="relative" :disabled="page === totalPages">
            <!-- <li class="relative" :class="page === lastPage ? 'md:invisible hidden' : ''"> -->
           <button 
             class="bg-primary mx-2 px-3 py-2 text-primary-white font-bold rounded-lg" 
