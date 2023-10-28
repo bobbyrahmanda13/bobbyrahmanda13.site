@@ -77,7 +77,7 @@ onMounted(() => {
 // get data from github api
 const fetchData = () => {
   try {
-    axios.get(`https://api.github.com/users/bobbyrahmanda13/repos?page=${page.value}`).then((response) => {
+    axios.get(`https://api.github.com/users/bobbyrahmanda13/repos`).then((response) => {
       repoGithub.value = response.data;
       //   console.log(repoGithub.value.length);
     });
