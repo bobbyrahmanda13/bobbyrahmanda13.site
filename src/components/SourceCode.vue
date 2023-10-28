@@ -46,7 +46,7 @@
           </button>
         </li>
         <li class="font-bold m-5 relative">{{ page }} of {{ lastPage }}</li>
-        <li class="relative" :disabled="page === repoGithub.value.length" >
+        <li class="relative" :disabled="page === totalPages.value" >
            <!-- <li class="relative" :class="page === lastPage ? 'md:invisible hidden' : ''"> -->
           <button
             class="bg-primary mx-2 px-3 py-2 text-primary-white font-bold rounded-lg"
@@ -112,6 +112,7 @@ const formatDate = (dateValue) => {
 // pagination
 const page = ref(1);
 const perPage = ref(6);
+const totalPages = ref(repoGithub.value.length)
 
 const prevPage = () => {
   page.value--;
@@ -122,7 +123,7 @@ const nextPage = () => {
  fetchData();
 };
 const lastPage = computed(() => {
-  let totPage = repoGithub.value.length;
+  let totPage = totalPages;
   let result = totPage / perPage.value;
   return Math.ceil(result);
 });
