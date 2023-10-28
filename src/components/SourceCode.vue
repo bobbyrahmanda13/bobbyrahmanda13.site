@@ -35,8 +35,8 @@
     </div>
     <div class="max-w-xl mx-auto flex justify-center">
       <!-- Pagination -->
-      <div class="mx-auto flex items-center">
-        <div class="relative">
+      <ul class="mx-auto flex items-center">
+        <li class="relative">
          <!-- <li class="relative" :class="page === 1 ? 'md:invisible hidden ' : ''"> -->
           <button
             class="bg-primary mx-2 px-3 py-2 text-primary-white font-bold rounded-lg"
@@ -45,9 +45,9 @@
           >
             Previous
           </button>
-        </div>
-        <div class="font-bold m-5 relative">{{ page }} of {{ totalPages }}</div>
-        <div class="relative">
+        </li>
+        <li class="font-bold m-5 relative">{{ page }} of {{ totalPages }}</li>
+        <li class="relative">
            <!-- <li class="relative" :class="page === lastPage ? 'md:invisible hidden' : ''"> -->
           <button 
             class="bg-primary mx-2 px-3 py-2 text-primary-white font-bold rounded-lg" 
@@ -56,8 +56,8 @@
           >
             Next
           </button>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
   </div>
 
@@ -114,7 +114,7 @@ const page = ref(1);
 const perPage = ref(6);
 
 const totalPages = computed(() => Math.ceil(repoGithub.value.length / perPage.value));
-const lastPage = ref(totalPages.value);
+const lastPage = computed(() => totalPages.value);
 
 const prevPage = () => {
   if(page.value > 1) {
