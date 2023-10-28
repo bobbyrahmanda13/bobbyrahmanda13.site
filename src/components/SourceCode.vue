@@ -130,8 +130,8 @@ const nextPage = () => {
 };
 
 const showRepos = computed(() => {
-  let start = (page.value - 1) * perPage.value;
-  let end = start + perPage.value;
+  let start = (page.value - 1) * totalPages.value;
+  let end = start + totalPages.value;
 
   return sortRepoGithub.value.slice(start, end);
 });
