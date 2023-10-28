@@ -69,8 +69,6 @@ import axios from 'axios';
 
 // get repo github
 const repoGithub = ref([]);
-const githubAPI = ref('https://api.github.com/users/bobbyrahmanda13/repos?page=');
-const githubPage = ref(1);
 
 onMounted(() => {
   fetchData();
@@ -79,7 +77,7 @@ onMounted(() => {
 // get data from github api
 const fetchData = () => {
   try {
-    axios.get(githubAPI.value + githubPage.value).then((response) => {
+    axios.get(`https://api.github.com/users/bobbyrahmanda13/repos?page=${page.value}&per_page=${perPage.value}`).then((response) => {
       repoGithub.value = response.data;
       //   console.log(repoGithub.value.length);
     });
