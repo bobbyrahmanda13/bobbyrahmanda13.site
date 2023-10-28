@@ -117,16 +117,15 @@ const totalPages = computed(() => Math.ceil(repoGithub.value.length / perPage.va
 const lastPage = computed(() => totalPages.value);
 
 const prevPage = () => {
-  if(page.value > 1) {
   page.value--;
  fetchData();
-  }
+
 };
 const nextPage = () => {
-   if(page.value < lastPage.value) {
+
   page.value++;
  fetchData();
-  }
+
 };
 
 const showRepos = computed(() => {
