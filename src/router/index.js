@@ -22,6 +22,11 @@ const routes = [
     component: About,
   },
   {
+    name: 'cv',
+    path: '/cv', // example.com/
+    component: Cv,
+  },
+  {
     path: '/:catchAll(.*)*',
     redirect: { name: 'home' },
   },
