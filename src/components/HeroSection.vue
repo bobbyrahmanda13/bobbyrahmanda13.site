@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <div class="text-center md:py-32 py-20 max-w-2xl mx-auto">
-      <h2 class="font-bold text-4xl">Hi, I am <span class="text-primary">Bobby Rahmanda</span></h2>
+      <h2 class="font-bold text-4xl">Hi, I am <span class="text-primary">Bobby Rahmanda</span> and I Love Windy An-Nisa'</h2>
       <div class="max-w-2xl flex items-center justify-evenly mx-auto">
         <p class="text-2xl text-primary-gray p-3">
           I like to make time for productivity and study it to improve my skills and workflow
